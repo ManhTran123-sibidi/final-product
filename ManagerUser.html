@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Adminpanel.css">
+</head>
+<body>
+    <h1>User Management</h1>
+</div>
+    <div class="container">
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <h2>Red<span class="danger">Store</span></h2>
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="ManagerUser.html" class="active">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3 href="ManagerUser.html">Users</h3>
+                </a>
+                <a href="History.html">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>History</h3>
+                </a>
+                <a href="Adminpanel.html">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analytics</h3>
+                </a>
+                <a href="SaleTickets.html">
+                    <span class="material-icons-sharp">
+                        mail_outline
+                    </span>
+                    <h3>Tickets</h3>
+                    <span class="message-count">27</span>
+                </a>
+                <a href="Reports.html">
+                    <span class="material-icons-sharp">
+                        report_gmailerrorred
+                    </span>
+                    <h3>Reports</h3>
+                </a>
+                <a href="Settings.html">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Settings</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                    <h3>New Login</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+        <div class="user-table">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Họ và Tên</th>
+                        <th>Email</th>
+                        <th>Vai trò</th>
+                        <th>Trạng thái</th>
+                        <th>Ngày đăng ký</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- Các dòng dữ liệu sẽ được thêm vào đây thông qua JavaScript -->
+                    <tr>
+                        <td>1</td>
+                        <td>Tran Linh Manh</td>
+                        <td>tranhongminh21072007@gmail.com</td>
+                        <td>Admin</td>
+                        <td>Active</td>
+                        <td>2024-11-10</td>
+                        <td><button class="editButton" data-id="1">Chỉnh sửa</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="userFormContainer" style="display: none;">
+                <form id="addUserForm">
+                    <input type="text" id="name" placeholder="Họ và Tên" required>
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="text" id="role" placeholder="Vai trò" required>
+                    <input type="text" id="status" placeholder="Trạng thái" required>
+                    <input type="date" id="registrationDate" required>
+                    <button type="submit">Lưu</button>
+                    <button type="button" id="cancelBtn">Hủy</button>
+                </form>
+            </div>    
+            <button id="addUserButton">Thêm người dùng</button>
+        </div>
+    </div>
+    <script src="../JS/Users.js">
+
+    </script>
+</body>
+</html>

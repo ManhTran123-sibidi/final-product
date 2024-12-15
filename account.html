@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products - Red store</title>
+  <link rel="stylesheet" href="../asset/CSS/account.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="../asset/image/logo.png" alt="" width="125px" />
+          </a>
+          <img src="../asset/image/menu.png" alt="" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <nav>
+          <ul id="MenuItems">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="account.html" id="accountLink">Account</a></li>
+          </ul>
+        </nav>
+        
+        <a href="cart.html" id="cartLink"><img src="../asset/image/cart.png" alt="" width="30px" height="30px" /></a>
+        <img src="../asset/image/menu.png" alt="" class="menu-icon" onclick="menutoggle()" />
+      </div>
+    </div>
+  </div>
+
+  <div class="account-page">
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <img src="../asset/image/image1.png" width="100%" />
+        </div>
+        <div class="col-2">
+          <div class="form-container">
+            <div class="form-btn">
+              <span>Login</span>
+              <span>Register</span>
+              <hr id="indicator" />
+            </div>
+
+            <!-- Login Form -->
+            <form id="LoginForm">
+              <input type="text" placeholder="Username" id="username-lg" required />
+              <input type="password" placeholder="Password" id="password-lg" required />
+              <button type="submit" class="btn">Login</button>
+              <a href="">Forgot Password</a>
+            </form>
+
+            <!-- Register Form -->
+            <form id="RegForm">
+              <input type="text" placeholder="Username" id="username" required />
+              <input type="email" placeholder="Email" id="email" required />
+              <input type="password" placeholder="Password" id="password" required />
+              <input type="password" placeholder="Confirm Password" id="confirmpassword" required />
+              <button type="submit" class="btn">Register</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../asset/JS/account.js"></script>
+  <script src="../asset/JS/Register.js"></script>
+  <script src="../asset/JS/Login.js"></script>
+  <script src="../asset/JS/emaijs.js"></script>
+  <script src="../asset/JS/auth.js"></script>
+</body>
+</html>

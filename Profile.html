@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mohammad Sahragard">
+    <title>Profile</title>
+    <!-- import font icon (fontawesome) -->
+    <script src="https://kit.fontawesome.com/b8b432d7d3.js" crossorigin="anonymous"></script>
+    <!-- import css file (style.css) -->
+    <link rel="stylesheet" href="../asset/CSS/Profile.css">
+    <style>
+        body {
+            background-color: #ffd6d6;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="../asset/image/logo.png" alt="" width="125px">
+            </a>
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <a href="cart.html">
+            <img src="../asset/image/cart.png" alt="" width="30px" height="30px" margin-right="20px">
+        </a>
+        <!-- Icon menu và dropdown -->
+        <div class="menu-dropdown">
+            <img src="../asset/image/menu.png" alt="" class="menu-icon" width="30px" height="30px">
+            <div id="DropdownMenu" class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="products.html">Product</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="account.html">Account</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+
+        <div class="profile-card">
+            <div class="profile-header">
+                <div class="main-profile">
+                    <div class="profile-image">
+                        <img src="../asset/image/profile-image.jpg" alt="">
+                    </div>                  
+                    <div class="profile-names"> 
+                        <h1 class="username">tran manh</h1>
+                        <small class="page-title">User dep trai</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-body">
+                <div class="profile-actions">
+                    <button class="follow">Follow</button>
+                    <button class="message">Message</button>
+                    <section class="bio">
+                        <div class="bio-header">
+                            <i class="fa fa-info-circle"></i>
+                            Bio
+                        </div>
+                        <p class="bio-text">
+                            ko co gi
+                        </p>
+                    </section>
+                </div>
+
+                <div class="account-info">
+                    <div class="data">
+                        <div class="important-data">
+                            <section class="data-item">
+                                <h3 class="value">0</h3>
+                                <small class="title">Post</small>
+                            </section>
+                            <section class="data-item">
+                                <h3 class="value">0</h3>
+                                <small class="title">Follower</small>
+                            </section>
+                            </section>
+                            <section class="data-item">
+                                <h3 class="value">0</h3>
+                                <small class="title">Following</small>
+                            </section>
+                        </div>
+                        <div class="other-data">
+                            <section class="data-item">
+                                <h3 class="value">0</h3>
+                                <small class="title">Likes</small>
+                            </section>
+                            <section class="data-item">
+                                <h3 class="value">0</h3>
+                                <small class="title">Comments</small>
+                            </section>
+                            <section class="data-item">
+                                <h3 class="value">0</h3>
+                                <small class="title">Saved</small>
+                            </section>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <span>Follow me in:</span>
+                        <a href="" class="media-link"><i class="fab fa-facebook-square"></i></a>
+                        <a href="https://twitter.com/MammadSahragard" class="media-link"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://www.linkedin.com/in/mohammadsahragard/" class="media-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/mammad.sahragard/" class="media-link"><i class="fab fa-instagram-square"></i></a>
+                        <a href="https://github.com/MohammadSahragard" class="media-link"><i class="fab fa-github-square"></i></a>
+                    </div>
+
+                    <div class="last-post">
+                        <div class="post-cover">
+                            <span class="last-badge">Last Post</span>
+                        </div>
+                        <h3 class="post-title">3D layer</h3>
+                        <button class="post-CTA">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+const menuIcon = document.querySelector(".menu-icon");
+const dropdown = document.getElementById("DropdownMenu");
+let hideTimeout;
+
+
+menuIcon.addEventListener("mouseover", () => {
+    clearTimeout(hideTimeout); 
+    dropdown.style.display = "block";
+});
+
+
+dropdown.addEventListener("mouseover", () => {
+    clearTimeout(hideTimeout);
+    dropdown.style.display = "block";
+});
+menuIcon.addEventListener("mouseout", () => {
+    hideTimeout = setTimeout(() => {
+        dropdown.style.display = "none";
+    }, 300); 
+});
+
+
+dropdown.addEventListener("mouseout", () => {
+    hideTimeout = setTimeout(() => {
+        dropdown.style.display = "none";
+    }, 300); 
+});
+    </script>
+</body>
+</html>

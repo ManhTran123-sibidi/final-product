@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý sản phẩm</title>
+    <link rel="stylesheet" href="../CSS/Adminpanel.css">
+</head>
+<body>
+    <body>
+        <div class="sidebar">
+          <h2>Dashboard</h2>
+          <ul>
+            <li><a href="Adminpanel.html">Dashboard</a></li>
+        <li><a href="ManagerProduct.html">Quản lý sản phẩm</a></li>
+        <li><a href="#users">Quản lý người dùng</a></li>
+        <li><a href="#orders">Đơn hàng</a></li>
+        <li><a href="#stats">Thống kê</a></li>
+        <li><a href="#settings">Cài đặt</a></li>
+          </ul>
+        </div>
+      
+        <div class="content">
+          <div class="header">
+            <h1>Quản lý Sản phẩm</h1>
+          </div>
+          
+          <!-- Nút thêm sản phẩm -->
+          <button class="add-product-btn">Thêm sản phẩm mới</button>
+      
+          <!-- Bảng sản phẩm -->
+          <table class="product-table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Tên sản phẩm</th>
+                <th>Giá</th>
+                <th>Danh mục</th>
+                <th>Hành động</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Áo thun nam</td>
+                <td>150.000đ</td>
+                <td>Thời trang</td>
+                <td>
+                  <button class="edit-btn">Chỉnh sửa</button>
+                  <button class="delete-btn">Xóa</button>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Giày thể thao</td>
+                <td>350.000đ</td>
+                <td>Giày dép</td>
+                <td>
+                  <button class="edit-btn">Chỉnh sửa</button>
+                  <button class="delete-btn">Xóa</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+      
+          <!-- Form chỉnh sửa sản phẩm -->
+          <div class="edit-product-form" style="display: none;">
+            <h3>Chỉnh sửa sản phẩm</h3>
+            <form id="edit-product-form">
+              <label for="product-name">Tên sản phẩm</label>
+              <input type="text" id="product-name" name="product-name">
+              
+              <label for="product-price">Giá</label>
+              <input type="text" id="product-price" name="product-price">
+              
+              <label for="product-category">Danh mục</label>
+              <input type="text" id="product-category" name="product-category">
+              
+              <button type="submit">Cập nhật</button>
+              <button type="button" id="cancel-edit">Hủy</button>
+            </form>
+          </div>
+        </div>
+      
+        <script src="../JS/Adminpanel.js"></script>
+      </body>
+      
+</body>
+</html>
